@@ -1,0 +1,224 @@
+/*
+   Animation example, for spinners
+*/
+.animate-spin {
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: inline-block;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@font-face {
+  font-family: 'flaticon';
+  src: url('fonts/flaticon.eot?38519451');
+  src: url('fonts/flaticon.eot?38519451#iefix') format('embedded-opentype'),
+       url('fonts/flaticon.woff2?38519451') format('woff2'),
+       url('fonts/flaticon.woff?38519451') format('woff'),
+       url('fonts/flaticon.ttf?38519451') format('truetype'),
+       url('fonts/flaticon.svg?38519451#flaticon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'flaticon';
+    src: url('fonts/flaticon.svg?38519451#flaticon') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "flaticon";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-shopping-bag:before { content: '\e800'; } /* '' */
+.icon-magnifying-glass:before { content: '\e801'; } /* '' */
+.icon-user:before { content: '\e802'; } /* '' */
+.icon-search:before { content: '\e803'; } /* '' */
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'flaticon';
+  font-style: normal;
+  font-weight: normal;
+ 
+  /* fix buttons height */
+  line-height: 1em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+}
+ 
+.icon-shopping-bag { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.icon-magnifying-glass { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.icon-user { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;'); }
+.icon-search { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe803;&nbsp;'); }
+
+@font-face {
+  font-family: 'flaticon';
+  src: url('fonts/flaticon.eot?94678658');
+  src: url('fonts/flaticon.eot?94678658#iefix') format('embedded-opentype'),
+       url('fonts/flaticon.svg?94678658#flaticon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'flaticon';
+  src: url('data:application/octet-stream;base64,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') format('woff'),
+       url('data:application/octet-stream;base64,AAEAAAAPAIAAAwBwR1NVQiCLJXoAAAD8AAAAVE9TLzI+IEmAAAABUAAAAFZjbWFwKHHsvwAAAagAAAGaY3Z0IAbh/wQAAAvMAAAAIGZwZ22KkZBZAAAL7AAAC3BnYXNwAAAAEAAAC8QAAAAIZ2x5ZulcIt8AAANEAAAEuGhlYWQWc5mTAAAH/AAAADZoaGVhBzgDVwAACDQAAAAkaG10eBOI//oAAAhYAAAAFGxvY2ECSANOAAAIbAAAAAxtYXhwAQUMCQAACHgAAAAgbmFtZYWU9AMAAAiYAAACzXBvc3TAMAnGAAALaAAAAFlwcmVw5UErvAAAF1wAAACGAAEAAAAKADAAPgACREZMVAAObGF0bgAaAAQAAAAAAAAAAQAAAAQAAAAAAAAAAQAAAAFsaWdhAAgAAAABAAAAAQAEAAQAAAABAAgAAQAGAAAAAQAAAAED6AGQAAUAAAJ6ArwAAACMAnoCvAAAAeAAMQECAAACAAUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFBmRWQAQOgA6AMDUv9qAFoDWACWAAAAAQAAAAAAAAAAAAUAAAADAAAALAAAAAQAAAFaAAEAAAAAAFQAAwABAAAALAADAAoAAAFaAAQAKAAAAAQABAABAADoA///AADoAP//AAAAAQAEAAAAAQACAAMABAAAAQYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAQAAAAAAAAAAEAADoAAAA6AAAAAABAADoAQAA6AEAAAACAADoAgAA6AIAAAADAADoAwAA6AMAAAAEAAAAAwAA/2oDhANSABoAIwA9AFdAVDsoGhEEBggBRwoBCAcGBwgGbQUCAgALCQIHCAAHXgwBBAQBWAABAQxIDQEGBgNYAAMDDQNJJiQcGzo5NjUyMS4tKikkPSY9IB8bIxwjNiMTIw4FGCsFAy4BKwEuAiIOARUjIgYHAxQeATMhMj4BNQEyHgEVITQ+AQEhIiYnEzMVFBYyNj0BIRUUFjI2PQEzEw4BA4Q5ARALdQE2WmpaNnYLDwI5KEUpAfQpRSj+cCZBJ/7kJ0EBIP4MJzcBN1wRFhEBHBEWEVw3ATcOAoQLDzVZNDRZNQ8L/XkkPSQkPSQDLCVAJiZAJfyGLSACalQLEBALVFQLEBALVP2WIC0AAAAAAgAA/2oD6ANSAB4AMwAqQCcZAQIEAwFHAAQAAQIEAWAAAwMAWAAAAAxIAAICDQJJGRgVKRoFBRkrBSc2NzY1NCcmJyYiBwYHBhQXFhcWMzI3NjcXFjI2NAE0NzY3NjIXFhcWFAcGBwYiJyYnJgPf8zIbHDo5YGPoZGA5Ojo5YWN0TklHOfMJGhD8VDIxUlbHVVMxMjIxU1XHVlIxMmPzOUdJT3RjYDk6OjlgY+hjYTk6HBsy8wkRGQIUY1ZSMTIyMVJWxlZTMTIyMVNVAAAAAAYAAP9qA0IDUgAIABEAEgA8AGkAagBZQFZFEwIICgFHAAMMAQAEAwBgBgEECwEJBQQJYAAFAAoIBQpgAAICAVgAAQEMSAAICAdYAAcHDQdJAQBcW1VUT05BPjk2LColJB8dDw4LCgUEAAgBCA0FFCsBMjY0JiIGFBYDNjIWFAYiJjQ3ASYnLgEnJicmJyYjIg8BBgcGIiYnJicmIyIOBAcGFRQWMyEyNjU0BwYjISImNTQ3Njc2NzY3PgIzFh8BHgEyNzY/ATY3Mh4BFxYXFhcWFzEWFRQHAZtjjo/HjIwcNZhqaphqNQImAQcGExATFRYiICkOGSkWHiM9QRUZEBkOKEEuIhMNAQJkTAHiTmJZHzj+Hjg9AgIFBAkLCwwhKhkDCSkcTlcnKhgpBgYZLB8NDgcJBQYBAh8BcI7HjZDEjgFyNWqYamqYNf1vGiUhPB4fFBYODREaDQoLFQ0RCREaLDw5SRomFU9dXFAoex48NSUSHxoYIB4SFx8QAQYaERoNDw8aBAMQHxcbFR4aKBEkEzUeAAAAAAX/+v9qA+kDWAAaAC8AOABAAEYAT0BMRURCPj01NBUBCQIFAUcHAQIFBAUCBG0IAQYABQIGBWAAAwMAWAAAAAxIAAQEAVgAAQENAUk5ORwbOUA5QDs6MjEmJRsvHC8eJwkFFisFATY3NicuAScmBw4BBwYXFhceATY3ARYyNjQlIicmJyY0NzY3NjIXFhcWFAcGBwYFBiIvATcXFhQBBx4BFzcuARcHFhc3JgPS/vs8BgYsLrJpZ1xfdgcGLC5YQpmZQQEFFz4s/aBhU1EwMTEvUVTCVFEvMTEvUVQB0Q0hDf47/g39ygFBdCgaLYHGHQkIHgcVAQVZaWdcX3YHBiwusGpmXWA7LB4eLP77Fiw+kDEvUVTCVFEvMTEvUVTCVFEvMcwNDf48/wwjA2siAjkzFThBnBENEw0SAAABAAAAAQAA+Zr2jF8PPPUACwPoAAAAANm4qvYAAAAA2biq9v/6/2oD6QNYAAAACAACAAAAAAAAAAEAAANS/2oAAAPo//r//wPpAAEAAAAAAAAAAAAAAAAAAAAFA+gAAAPoAAAD6AAAA+gAAAPo//oAAAAAAIoA8gG+AlwAAQAAAAUAawAGAAAAAAACABwALABzAAAAagtwAAAAAAAAABIA3gABAAAAAAAAADUAAAABAAAAAAABAAgANQABAAAAAAACAAcAPQABAAAAAAADAAgARAABAAAAAAAEAAgATAABAAAAAAAFAAsAVAABAAAAAAAGAAgAXwABAAAAAAAKACsAZwABAAAAAAALABMAkgADAAEECQAAAGoApQADAAEECQABABABDwADAAEECQACAA4BHwADAAEECQADABABLQADAAEECQAEABABPQADAAEECQAFABYBTQADAAEECQAGABABYwADAAEECQAKAFYBcwADAAEECQALACYByUNvcHlyaWdodCAoQykgMjAxOSBieSBvcmlnaW5hbCBhdXRob3JzIEAgZm9udGVsbG8uY29tZmxhdGljb25SZWd1bGFyZmxhdGljb25mbGF0aWNvblZlcnNpb24gMS4wZmxhdGljb25HZW5lcmF0ZWQgYnkgc3ZnMnR0ZiBmcm9tIEZvbnRlbGxvIHByb2plY3QuaHR0cDovL2ZvbnRlbGxvLmNvbQBDAG8AcAB5AHIAaQBnAGgAdAAgACgAQwApACAAMgAwADEAOQAgAGIAeQAgAG8AcgBpAGcAaQBuAGEAbAAgAGEAdQB0AGgAbwByAHMAIABAACAAZgBvAG4AdABlAGwAbABvAC4AYwBvAG0AZgBsAGEAdABpAGMAbwBuAFIAZQBnAHUAbABhAHIAZgBsAGEAdABpAGMAbwBuAGYAbABhAHQAaQBjAG8AbgBWAGUAcgBzAGkAbwBuACAAMQAuADAAZgBsAGEAdABpAGMAbwBuAEcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAAcwB2AGcAMgB0AHQAZgAgAGYAcgBvAG0AIABGAG8AbgB0AGUAbABsAG8AIABwAHIAbwBqAGUAYwB0AC4AaAB0AHQAcAA6AC8ALwBmAG8AbgB0AGUAbABsAG8ALgBjAG8AbQAAAAACAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUBAgEDAQQBBQEGAAxzaG9wcGluZy1iYWcQbWFnbmlmeWluZy1nbGFzcwR1c2VyBnNlYXJjaAAAAAAAAAEAAf//AA8AAAAAAAAAAAAAAAAAAAAAABgAGAAYABgDWP9qA1j/arAALCCwAFVYRVkgIEu4AA5RS7AGU1pYsDQbsChZYGYgilVYsAIlYbkIAAgAY2MjYhshIbAAWbAAQyNEsgABAENgQi2wASywIGBmLbACLCBkILDAULAEJlqyKAEKQ0VjRVJbWCEjIRuKWCCwUFBYIbBAWRsgsDhQWCGwOFlZILEBCkNFY0VhZLAoUFghsQEKQ0VjRSCwMFBYIbAwWRsgsMBQWCBmIIqKYSCwClBYYBsgsCBQWCGwCmAbILA2UFghsDZgG2BZWVkbsAErWVkjsABQWGVZWS2wAywgRSCwBCVhZCCwBUNQWLAFI0KwBiNCGyEhWbABYC2wBCwjISMhIGSxBWJCILAGI0KxAQpDRWOxAQpDsAFgRWOwAyohILAGQyCKIIqwASuxMAUlsAQmUVhgUBthUllYI1khILBAU1iwASsbIbBAWSOwAFBYZVktsAUssAdDK7IAAgBDYEItsAYssAcjQiMgsAAjQmGwAmJmsAFjsAFgsAUqLbAHLCAgRSCwC0NjuAQAYiCwAFBYsEBgWWawAWNgRLABYC2wCCyyBwsAQ0VCKiGyAAEAQ2BCLbAJLLAAQyNEsgABAENgQi2wCiwgIEUgsAErI7AAQ7AEJWAgRYojYSBkILAgUFghsAAbsDBQWLAgG7BAWVkjsABQWGVZsAMlI2FERLABYC2wCywgIEUgsAErI7AAQ7AEJWAgRYojYSBksCRQWLAAG7BAWSOwAFBYZVmwAyUjYUREsAFgLbAMLCCwACNCsgsKA0VYIRsjIVkqIS2wDSyxAgJFsGRhRC2wDiywAWAgILAMQ0qwAFBYILAMI0JZsA1DSrAAUlggsA0jQlktsA8sILAQYmawAWMguAQAY4ojYbAOQ2AgimAgsA4jQiMtsBAsS1RYsQRkRFkksA1lI3gtsBEsS1FYS1NYsQRkRFkbIVkksBNlI3gtsBIssQAPQ1VYsQ8PQ7ABYUKwDytZsABDsAIlQrEMAiVCsQ0CJUKwARYjILADJVBYsQEAQ2CwBCVCioogiiNhsA4qISOwAWEgiiNhsA4qIRuxAQBDYLACJUKwAiVhsA4qIVmwDENHsA1DR2CwAmIgsABQWLBAYFlmsAFjILALQ2O4BABiILAAUFiwQGBZZrABY2CxAAATI0SwAUOwAD6yAQEBQ2BCLbATLACxAAJFVFiwDyNCIEWwCyNCsAojsAFgQiBgsAFhtRAQAQAOAEJCimCxEgYrsHIrGyJZLbAULLEAEystsBUssQETKy2wFiyxAhMrLbAXLLEDEystsBgssQQTKy2wGSyxBRMrLbAaLLEGEystsBsssQcTKy2wHCyxCBMrLbAdLLEJEystsB4sALANK7EAAkVUWLAPI0IgRbALI0KwCiOwAWBCIGCwAWG1EBABAA4AQkKKYLESBiuwcisbIlktsB8ssQAeKy2wICyxAR4rLbAhLLECHistsCIssQMeKy2wIyyxBB4rLbAkLLEFHistsCUssQYeKy2wJiyxBx4rLbAnLLEIHistsCgssQkeKy2wKSwgPLABYC2wKiwgYLAQYCBDI7ABYEOwAiVhsAFgsCkqIS2wKyywKiuwKiotsCwsICBHICCwC0NjuAQAYiCwAFBYsEBgWWawAWNgI2E4IyCKVVggRyAgsAtDY7gEAGIgsABQWLBAYFlmsAFjYCNhOBshWS2wLSwAsQACRVRYsAEWsCwqsAEVMBsiWS2wLiwAsA0rsQACRVRYsAEWsCwqsAEVMBsiWS2wLywgNbABYC2wMCwAsAFFY7gEAGIgsABQWLBAYFlmsAFjsAErsAtDY7gEAGIgsABQWLBAYFlmsAFjsAErsAAWtAAAAAAARD4jOLEvARUqLbAxLCA8IEcgsAtDY7gEAGIgsABQWLBAYFlmsAFjYLAAQ2E4LbAyLC4XPC2wMywgPCBHILALQ2O4BABiILAAUFiwQGBZZrABY2CwAENhsAFDYzgtsDQssQIAFiUgLiBHsAAjQrACJUmKikcjRyNhIFhiGyFZsAEjQrIzAQEVFCotsDUssAAWsAQlsAQlRyNHI2GwCUMrZYouIyAgPIo4LbA2LLAAFrAEJbAEJSAuRyNHI2EgsAQjQrAJQysgsGBQWCCwQFFYswIgAyAbswImAxpZQkIjILAIQyCKI0cjRyNhI0ZgsARDsAJiILAAUFiwQGBZZrABY2AgsAErIIqKYSCwAkNgZCOwA0NhZFBYsAJDYRuwA0NgWbADJbACYiCwAFBYsEBgWWawAWNhIyAgsAQmI0ZhOBsjsAhDRrACJbAIQ0cjRyNhYCCwBEOwAmIgsABQWLBAYFlmsAFjYCMgsAErI7AEQ2CwASuwBSVhsAUlsAJiILAAUFiwQGBZZrABY7AEJmEgsAQlYGQjsAMlYGRQWCEbIyFZIyAgsAQmI0ZhOFktsDcssAAWICAgsAUmIC5HI0cjYSM8OC2wOCywABYgsAgjQiAgIEYjR7ABKyNhOC2wOSywABawAyWwAiVHI0cjYbAAVFguIDwjIRuwAiWwAiVHI0cjYSCwBSWwBCVHI0cjYbAGJbAFJUmwAiVhuQgACABjYyMgWGIbIVljuAQAYiCwAFBYsEBgWWawAWNgIy4jICA8ijgjIVktsDossAAWILAIQyAuRyNHI2EgYLAgYGawAmIgsABQWLBAYFlmsAFjIyAgPIo4LbA7LCMgLkawAiVGUlggPFkusSsBFCstsDwsIyAuRrACJUZQWCA8WS6xKwEUKy2wPSwjIC5GsAIlRlJYIDxZIyAuRrACJUZQWCA8WS6xKwEUKy2wPiywNSsjIC5GsAIlRlJYIDxZLrErARQrLbA/LLA2K4ogIDywBCNCijgjIC5GsAIlRlJYIDxZLrErARQrsARDLrArKy2wQCywABawBCWwBCYgLkcjRyNhsAlDKyMgPCAuIzixKwEUKy2wQSyxCAQlQrAAFrAEJbAEJSAuRyNHI2EgsAQjQrAJQysgsGBQWCCwQFFYswIgAyAbswImAxpZQkIjIEewBEOwAmIgsABQWLBAYFlmsAFjYCCwASsgiophILACQ2BkI7ADQ2FkUFiwAkNhG7ADQ2BZsAMlsAJiILAAUFiwQGBZZrABY2GwAiVGYTgjIDwjOBshICBGI0ewASsjYTghWbErARQrLbBCLLA1Ky6xKwEUKy2wQyywNishIyAgPLAEI0IjOLErARQrsARDLrArKy2wRCywABUgR7AAI0KyAAEBFRQTLrAxKi2wRSywABUgR7AAI0KyAAEBFRQTLrAxKi2wRiyxAAEUE7AyKi2wRyywNCotsEgssAAWRSMgLiBGiiNhOLErARQrLbBJLLAII0KwSCstsEossgAAQSstsEsssgABQSstsEwssgEAQSstsE0ssgEBQSstsE4ssgAAQistsE8ssgABQistsFAssgEAQistsFEssgEBQistsFIssgAAPistsFMssgABPistsFQssgEAPistsFUssgEBPistsFYssgAAQCstsFcssgABQCstsFgssgEAQCstsFkssgEBQCstsFossgAAQystsFsssgABQystsFwssgEAQystsF0ssgEBQystsF4ssgAAPystsF8ssgABPystsGAssgEAPystsGEssgEBPystsGIssDcrLrErARQrLbBjLLA3K7A7Ky2wZCywNyuwPCstsGUssAAWsDcrsD0rLbBmLLA4Ky6xKwEUKy2wZyywOCuwOystsGgssDgrsDwrLbBpLLA4K7A9Ky2waiywOSsusSsBFCstsGsssDkrsDsrLbBsLLA5K7A8Ky2wbSywOSuwPSstsG4ssDorLrErARQrLbBvLLA6K7A7Ky2wcCywOiuwPCstsHEssDorsD0rLbByLLMJBAIDRVghGyMhWUIrsAhlsAMkUHiwARUwLQBLuADIUlixAQGOWbABuQgACABjcLEABUKyAAEAKrEABUKzCgIBCCqxAAVCsw4AAQgqsQAGQroCwAABAAkqsQAHQroAQAABAAkqsQMARLEkAYhRWLBAiFixA2REsSYBiFFYugiAAAEEQIhjVFixAwBEWVlZWbMMAgEMKrgB/4WwBI2xAgBEAAA=') format('truetype');
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'flaticon';
+    src: url('fonts/flaticon.svg?94678658#flaticon') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "flaticon";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+.icon-shopping-bag:before { content: '\e800'; } /* '' */
+.icon-magnifying-glass:before { content: '\e801'; } /* '' */
+.icon-user:before { content: '\e802'; } /* '' */
+.icon-search:before { content: '\e803'; } /* '' */
+

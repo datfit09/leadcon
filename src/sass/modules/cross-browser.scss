@@ -1,0 +1,24 @@
+/* FIREFOX: REMOVE DOTTED BORDER WHEN FOCUS */
+@mixin firefox-focus(){
+    &::-moz-focus-inner{
+        border: none $i;
+    }
+}
+
+/* IE BROWSER */
+.ie-detected{
+    .menu-open .menu-layout-1 .menu-toggle-btn span{
+        &:before{
+            @include transform( rotate( 45deg ) translate( 14px, -9px ) );
+        }
+        &:after{
+            @include transform( rotate( -45deg ) translate( 14px, 9px ) );
+        }
+    }
+    .tns-controls [data-controls]{
+        @extend .flex;
+    }
+    .quick-view-content .single_add_to_cart_button{
+        width: auto
+    }
+}

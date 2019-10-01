@@ -1,0 +1,96 @@
+.leadcon-team-member {
+    display: flex;
+    .leadcon-contact-icon li{
+        a{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 30px;
+            min-width: 30px;
+        }
+
+        a.fa-twitter.background{
+            background: #55acee;
+        }
+
+        a.fa-google-plus.background{
+            background: #dd4b39;
+        }
+
+        a.fa-facebook.background{
+            background: #3b5998;
+        }
+
+        a.fa-youtobe.background{
+            background: #cd201f;
+        }
+
+        a.fa-skype.background{
+            background: #00aff0;
+        }
+
+        a.fa-instagram.background{
+            background: rgb(131,58,180);
+            background: -webkit-linear-gradient(left, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+            background: -o-linear-gradient(left, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+            background: linear-gradient(to right, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        }
+
+        a.fa-linkedin.background{
+            background: #1a85bd;
+        }
+        a.fa-pinterest.background{
+            background: #c42133;
+        }
+
+        a.fa-slideshare.background{
+            background: #1a85bd;
+        }
+    }
+}
+
+// Intro Widget.
+.leadcon-member-avatar {
+    position: relative;
+    overflow: hidden;
+    margin-right: 30px;
+    &:hover .leadcon-member-contact {
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.avatar img {
+    display: block;
+}
+
+.leadcon-member-contact {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    transition-duration: 0.3s;
+    @media( max-width: 375px ) {
+        bottom: -90px;
+        left: 0;
+    }
+    @media( max-width: 1024px ) {
+        bottom: -90px;
+    }
+
+    .leadcon-member-name {
+        i {
+            margin-right: 15px;
+            &:before {
+                color: #14f1e4;
+                font-size: 48px;
+            }
+        }
+    }
+}
+
+ul.leadcon-contact-icon{
+    display: inline-flex;
+}

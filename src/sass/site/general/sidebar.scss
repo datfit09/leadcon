@@ -1,0 +1,152 @@
+.leadcon_widget_recent_entries{
+    ul {
+        li.leadcon-entry{
+            display: block;
+            clear: both;
+            padding-bottom: 20px;
+            .leadcon-entry-thumbnail{
+                width: 30%;
+                float: left;
+                margin-right: 15px;
+                margin-bottom: 20px;
+                    img{
+                        border-radius: 5px;
+                    }
+            }
+            .leadcon-recent-post-detail {
+                display: flex;
+                flex-direction: column;
+                a.warderlust-recent-post-title{
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
+
+.widget {
+    margin: 0 0 60px;
+
+    /* Make sure select elements fit in widgets. */
+    select {
+        max-width: 100%;
+    }
+}
+
+.main-sidebar {
+
+    /* Remove margin of the main sidebar's last widget */
+    .widget:last-of-type {
+        margin: 0;
+    }
+}
+
+.widget-title {
+    font-size: 17px;
+    text-transform: uppercase;
+}
+.footer-widgets {
+    .widget-title {
+        font-size: 18px;
+        font-family: 'Ubuntu';
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        margin-bottom: 40px;
+        &:before{
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 3px;
+            bottom: -10px;
+            left: 42%;
+            background-color: #3fd0d4;
+        }
+    }
+}
+
+.widget_archive,
+.widget_categories,
+.widget_meta,
+.widget_nav_menu,
+.widget_pages,
+.widget_recent_comments,
+.widget_recent_entries,
+.leadcon_widget_recent_entries,
+.widget_rss {
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+
+    li &:not( :first-child ) {
+        transition: all 0.2s ease-in-out;
+        margin-bottom: 4px;
+        position: relative;
+        display: block;
+        padding: .75rem 0 0 .75rem;
+        width: 100%;
+        text-align: inherit;
+    }
+}
+
+.widget_calendar {
+
+    .calendar_wrap {
+        text-align: center;
+        overflow-x:auto
+    }
+
+    table {
+        margin: 0;
+    }
+
+    table th,
+    table td {
+        border: 0;
+    }
+}
+
+/* Tag cloud widget */
+.widget_tag_cloud{
+    ul{
+        font-size: 0;
+        li{
+            display: inline-block;
+            margin: 3px;
+            a{
+                padding: 5px 15px;
+                border-radius: 3px;
+                color: #999999;
+                border: 1px solid #e6e6e6;
+                &:hover, &:active{
+                    background-color: #ffc600;
+                    border: 1px solid transparent;
+                }
+            }
+        }
+    }
+}
+
+.widget_categories ul {
+    li {
+        a {
+            display: inline-block;
+            width: 85%;
+        }
+        .children {
+            padding-left: 15px;
+        }
+    }
+}

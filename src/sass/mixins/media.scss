@@ -1,0 +1,26 @@
+// Media Queries
+@mixin media( $width ) {
+	@if mobile == $width {
+		@media only screen and (min-width: $screen-ios) {
+			@content;
+		}
+	}
+
+	@if tablet == $width {
+		@media only screen and (min-width: $screen-sm) {
+			@content;
+		}
+	}
+
+	@if desktop == $width {
+		@media only screen and (min-width: $screen-md) {
+			@content;
+		}
+	}
+
+	@if wide == $width {
+		@media only screen and (min-width: $screen-lg) {
+			@content;
+		}
+	}
+}

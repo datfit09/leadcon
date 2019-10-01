@@ -1,0 +1,45 @@
+.error404{
+    background-image: url(assets/images/404.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 947px;
+}
+
+.not-found{
+    min-height: 767px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.page404{
+    position: relative;
+    .image-404{
+        position: absolute;
+        top: 20%;
+        left: 14%;
+    }
+    .text-404 {
+        position: absolute;
+        top: 60%;
+        text-align: center;
+    }
+    .btn-404{
+        height: 45px;
+        width: 130px;
+        text-transform: uppercase;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        margin-top: 25px;
+        &:hover{
+            background-color: #fff;
+        }
+    }
+    h2.title-404{
+        font-family: "Gotham Book";
+        font-size: 35px;
+        color: #fff;
+    }
+}
+

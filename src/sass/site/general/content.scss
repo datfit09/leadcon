@@ -1,0 +1,39 @@
+.right-sidebar {
+    @include media(desktop) {
+        .content-area {
+            float: left;
+            width: 70%;
+            margin-right: 5%;
+        }
+
+        aside#secondary {
+            float: right;
+            width: 25%;
+            margin-top: 0;
+        }
+    }
+}
+
+.left-sidebar {
+    @include media(desktop) {
+        .content-area {
+            float: right;
+            width: 75%;
+            margin-left: 5%;
+        }
+
+        .main-sidebar {
+            float: left;
+            width: 20%;
+            margin-top: 0;
+        }
+    }
+}
+
+.no-sidebar {
+    .content-area {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+}
