@@ -69,7 +69,7 @@ Leadcon_Kirki::add_field(
 		'label'       => esc_html__( 'Background Page Header', 'leadcon' ),
 		'section'     => 'leadcon_page_header',
 		'default'     => [
-			'background-color'      => '#eee',
+			'background-color'      => '#f7f7f7',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
 			'background-position'   => 'center center',
@@ -92,7 +92,7 @@ Leadcon_Kirki::add_field(
         'settings'    => 'leadcon_color_page_title',
         'label'       => __( 'Color page title', 'leadcon' ),
         'section'     => 'leadcon_page_header',
-        'default'     => '#fff',
+        'default'     => '#1850df',
         'output'      => [
             array(
                 'property' => 'color',
@@ -104,6 +104,27 @@ Leadcon_Kirki::add_field(
     ]
 );
 
+Leadcon_Kirki::add_field(
+    'leadcon',
+    array(
+        'type'        => 'typography',
+        'settings'    => 'leadcon_font_page_title',
+        'label'       => esc_html__( 'Font page title', 'leadcon' ),
+        'description' => esc_html__( 'Set the font size.', 'leadcon' ),
+        'section'     => 'leadcon_page_header',
+        'default'     => array(
+            'font-size' => '70px',
+            'font-weight' => '700',
+        ),
+        'transport'   => 'auto',
+        'output'      => array(
+            array(
+                'element' => '.page-title',
+            ),
+        ),
+    )
+);
+
 // Add Position Title.
 Leadcon_Kirki::add_field( 
     'leadcon', 
@@ -112,7 +133,7 @@ Leadcon_Kirki::add_field(
         'settings'    => 'leadcon_position_page_title',
         'label'       => esc_html__( 'Position page title', 'leadcon' ),
         'section'     => 'leadcon_page_header',
-        'default'     => 'left',
+        'default'     => 'center',
         'priority'    => 10,
         'choices'     => [
             'left'   => esc_html__( 'Left', 'leadcon' ),
