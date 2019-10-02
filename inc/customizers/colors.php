@@ -54,6 +54,7 @@ Leadcon_Kirki::add_field(
 					'input[type="color"]:focus',
 					'textarea:focus',
                     '.top-bar-content',
+                    '.leadcon_widget_recent_entries a',
 				),
 			), // End color property
 
@@ -240,10 +241,8 @@ Leadcon_Kirki::add_field(
                     '.widget_recent_comments a',
                     '.widget_recent_entries a',
                     '.widget_rss a',
-                    '.leadcon_widget_recent_entries a',
                     '.post-navigation .meta-nav',
                     '.blog-entry-meta .entry-meta-item a',
-                    'span.ht-warderlust-recent-post-on',
                     '.blog-entry-meta',
                     '.posted-on',
                     '.posted-on>a',
