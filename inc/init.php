@@ -127,9 +127,9 @@ function leadcon_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer Widgets', 'leadcon' ),
+			'name'          => esc_html__( 'Footer Widgets Row 1', 'leadcon' ),
 			'id'            => 'sidebar-2',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'leadcon' ),
+			'description'   => esc_html__( 'Add widgets here to appear in your footer row 1.', 'leadcon' ),
 			'before_widget' => '<section id="%1$s" class="widget footer-widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -148,6 +148,18 @@ function leadcon_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+    register_sidebar(
+        array(
+            'name'          => esc_html__( 'Footer Widgets Row 2', 'leadcon' ),
+            'id'            => 'sidebar-4',
+            'description'   => esc_html__( 'Add widgets here to appear in your footer row 2.', 'leadcon' ),
+            'before_widget' => '<section id="%1$s" class="widget footer-widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        )
+    );
 }
 add_action( 'widgets_init', 'leadcon_widgets_init' );
 

@@ -46,22 +46,11 @@
 }
 .footer-widgets {
     .widget-title {
-        font-size: 18px;
-        font-family: 'Ubuntu';
+        font-size: 16px;
+        color: #333333;
+        font-weight: bold;
         text-transform: uppercase;
-        text-align: center;
-        color: #fff;
-        position: relative;
-        margin-bottom: 40px;
-        &:before{
-            position: absolute;
-            content: '';
-            width: 50px;
-            height: 3px;
-            bottom: -10px;
-            left: 42%;
-            background-color: #3fd0d4;
-        }
+        margin-bottom: 25px;
     }
 }
 

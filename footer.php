@@ -22,11 +22,11 @@ if( class_exists('acf') ) {
         <div class="site-info">
             <div class="container">
                 <div class="site-info-wrapper">
-                    <?php
-                    get_template_part( 'template-parts/footer/footer', 'copyright' );
-                    get_template_part( 'template-parts/footer/footer', 'navigation' );
-                    ?>
+                    <?php get_template_part( 'template-parts/footer/footer', 'widgets-2' ); ?>
                 </div><!-- .site-info-wrapper -->
+                <?php if ( get_theme_mod('copyright_footer',true) === true ) {
+                    get_template_part( 'template-parts/footer/footer', 'copyright' ); 
+                } ?>
             </div>
         </div><!-- .site-info -->
     </footer><!-- #colophon -->

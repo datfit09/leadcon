@@ -603,7 +603,7 @@ endif;
      */
 if ( ! function_exists( 'leadcon_default_footer_copyright' ) ){
     function leadcon_default_footer_copyright() {
-        return sprintf( esc_html__( 'Copyright &copy; %1$d leadcon. All Rights Reserved. Designed by %2$s', 'leadcon' ), date( 'Y' ), '<a href="https://themeforest.net/user/haintheme">BoostifyThemes</a>.' );
+        return sprintf( esc_html__( '&copy; %1$d Leadcon. All Rights Reserved. Designed by %2$s', 'leadcon' ), date( 'Y' ), '<a href="https://themeforest.net/user/haintheme">BoostifyThemes</a>.' );
     }
 }
 

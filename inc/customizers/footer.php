@@ -42,6 +42,21 @@ Leadcon_Kirki::add_field(
 	)
 );
 
+Leadcon_Kirki::add_field(
+    'leadcon',
+    array(
+        'type'        => 'switch',
+        'settings'    => 'copyright_footer',
+        'label'       => esc_html__( 'Copyright footer', 'leadcon' ),
+        'section'     => 'leadcon_footer_section',
+        'default'     => '1',
+        'choices'     => [
+            'on'  => esc_html__( 'Enable', 'leadcon' ),
+            'off' => esc_html__( 'Disable', 'leadcon' ),
+        ],
+    )
+);
+
 /**
  * Background Page Header
  */
@@ -53,7 +68,7 @@ Leadcon_Kirki::add_field(
 		'label'       => esc_html__( 'Background Footer Widget', 'leadcon' ),
 		'section'     => 'leadcon_footer_section',
 		'default'     => [
-			'background-color'      => '#1a1a1a',
+			'background-color'      => '#f7f7f7',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
 			'background-position'   => 'center center',
@@ -79,7 +94,7 @@ Leadcon_Kirki::add_field(
 		'label'       => esc_html__( 'Background Footer', 'leadcon' ),
 		'section'     => 'leadcon_footer_section',
 		'default'     => [
-			'background-color'      => '#1a1a1a',
+			'background-color'      => '#f7f7f7',
 			'background-image'      => '',
 			'background-repeat'     => 'repeat',
 			'background-position'   => 'center center',
