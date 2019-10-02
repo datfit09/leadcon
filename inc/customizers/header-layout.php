@@ -92,31 +92,3 @@ Leadcon_Kirki::add_field(
         'transport'   => 'postMessage',
     )
 );
-
-/*
- Header Transparent
- */
-
-Leadcon_Kirki::add_section(
-	'leadcon_header_transparent',
-	array(
-		'title' => esc_html__( 'Header Transparent', 'leadcon' ),
-		'panel' => 'leadcon_header_layout',
-	)
-);
-
-Leadcon_Kirki::add_field(
-	'leadcon',
-	array(
-		'type'        => 'switch',
-		'settings'    => 'header_tranparent',
-		'label'       => esc_html__( 'Header Transparent', 'leadcon' ),
-		'section'     => 'leadcon_header_transparent',
-		'default'     => '0',
-		'priority'    => 10,
-		'choices'     => [
-			'on'  => esc_html__( 'Enable', 'leadcon' ),
-			'off' => esc_html__( 'Disable', 'leadcon' ),
-		],
-	)
-);

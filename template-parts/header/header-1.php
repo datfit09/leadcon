@@ -6,11 +6,10 @@
  */
 
 $class = leadcon_site_header_container_class();
-$transparent = leadcon_header_transparent_class();
 leadcon_site_search();
 ?>
 
-<header id="masthead" class="<?php echo esc_attr( $transparent ); ?> header-1">
+<header id="masthead" class="header-transparent header-1">
 	<div class="<?php echo esc_attr( $class ); ?>">
 		<div class="site-header-container">
 			<?php get_template_part( 'template-parts/header/site-branding' ); ?>

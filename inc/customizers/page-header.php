@@ -39,8 +39,8 @@ Leadcon_Kirki::add_field(
 		'label'    => esc_attr__( 'Space', 'leadcon' ),
 		'section'  => 'leadcon_page_header',
 		'default'  => array(
-            'min-height'    => '200px',
-            'margin-bottom' => '0px',
+            'min-height'    => '500px',
+            'margin-bottom' => '100px',
 		),
 		'transport' => 'auto',
 		'output'    => array(
@@ -146,99 +146,6 @@ Leadcon_Kirki::add_field(
                 'element'  => '.page-header',
                 'property' => 'text-align',
             ],
-        ],
-    ]
-);
-
-
-/**
- * Show/Hidden breadcrumb
- */
-Leadcon_Kirki::add_field(
-    'leadcon',
-    array(
-        'type'        => 'switch',
-        'settings'    => 'breadcrumb',
-        'label'       => esc_html__( 'Breadcrumb', 'leadcon' ),
-        'section'     => 'leadcon_page_header',
-        'default'     => '1',
-        'priority'    => 10,
-        'choices'     => [
-            'on'  => esc_html__( 'Enable', 'leadcon' ),
-            'off' => esc_html__( 'Disable', 'leadcon' ),
-        ],
-    )
-);
-
-Leadcon_Kirki::add_field(
-    'leadcon',
-    array(
-        'type'     => 'dimensions',
-        'settings' => 'c_height_2',
-        'label'    => esc_attr__( 'Space container breadcrumb', 'leadcon' ),
-        'section'  => 'leadcon_page_header',
-        'default'  => array(
-            'padding'       => '15px',
-            'margin-bottom' => '50px',
-        ),
-        'transport' => 'auto',
-        'output'    => array(
-            array(
-                'element'  => '.container-breadcrumb',
-                'property' => 'padding',
-                'choice'   => 'padding'
-            ),
-            array(
-                'element'  => '.breadcrumb',
-                'property' => 'margin-bottom',
-                'choice'   => 'margin-bottom'
-            ),
-        ),
-));
-
-/**
- * Background breadcrumb
- */
-Leadcon_Kirki::add_field(
-    'leadcon',
-    [
-        'type'        => 'background',
-        'settings'    => 'leadcon_background_breadcrumb',
-        'label'       => esc_html__( 'Background Breadcrumb', 'leadcon' ),
-        'section'     => 'leadcon_page_header',
-        'default'     => [
-            'background-color'      => '#ffffff',
-            'background-image'      => '',
-            'background-repeat'     => 'repeat',
-            'background-position'   => 'center center',
-            'background-size'       => 'cover',
-            'background-attachment' => 'scroll',
-        ],
-        'transport'   => 'refresh',
-        'output'      => [
-            [
-                'element' => '.breadcrumb',
-            ],
-    ],
-] );
-
-// Add Color breadcrumb.
-Leadcon_Kirki::add_field( 
-    'leadcon', 
-    [
-        'type'        => 'color',
-        'settings'    => 'leadcon_color_breadcrumb',
-        'label'       => __( 'Color breadcrumb', 'leadcon' ),
-        'section'     => 'leadcon_page_header',
-        'default'     => '#999999',
-        'output'      => [
-            array(
-                'property' => 'color',
-                'element' => array(
-                    '.woocommerce-breadcrumb',
-                    '.woocommerce-breadcrumb a',
-                ),
-            ),
         ],
     ]
 );

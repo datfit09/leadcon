@@ -8,6 +8,7 @@
  *
  * @package leadcon
  */
+$lc_show_footer = '';
 if( class_exists('acf') ) {
     $lc_show_footer = get_field('lc_show_footer');
 }

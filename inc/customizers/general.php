@@ -85,8 +85,7 @@ Leadcon_Kirki::add_field(
     'leadcon', [
     'type'        => 'image',
     'settings'    => 'image_preload_setting_url',
-    'label'       => esc_html__( 'Image Control (URL)', 'leadcon' ),
-    'description' => esc_html__( 'Description Here.', 'leadcon' ),
+    'label'       => esc_html__( 'Image Preload', 'leadcon' ),
     'section'     => 'leadcon_general',
     'default'     => '',
     'transport'   => 'auto',

@@ -10,8 +10,8 @@
     @media (min-width: 1200px){
         width: 1200px;
     }
-    @media (min-width: 1622px) {
-        width: 1622px;
+    @media (min-width: 1721px) {
+        width: 1721px;
     }
 }
 
@@ -22,10 +22,6 @@
 
     .page-title {
         margin-bottom: 0.25em;
-    }
-
-    .woocommerce-breadcrumb {
-        margin: 0;
     }
 }
 
@@ -47,10 +43,3 @@
     }
 }
 
-// Breadcrumb.
-.woocommerce-breadcrumb {
-    text-transform: uppercase;
-}
-.breadcrumb{
-    border-bottom: 1px solid #e6e6e6;
-}

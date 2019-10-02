@@ -602,7 +602,6 @@ li.item-contact.item-email {
 
 .admin-bar .header-sticky{
     top: 32px;
-
     @media ( max-width: 360px ) {
         display: none;
     }
@@ -730,11 +729,9 @@ li.item-contact.item-email {
     z-index: 99;
 }
 
+
 .admin-bar .header-transparent {
-    @media (min-width: 786px) {
-        top: 32px;
-    }
-     top: 46px;
+    top: 50px;
 
     @media (max-width: 787px) {
         .site-title a {
@@ -758,6 +755,15 @@ li.item-contact.item-email {
     }
 
 }
+
+.home {
+    .header-transparent {
+        background: transparent;
+        position: relative;
+        top: 0;
+    }
+}
+
 
 #comment {
     min-height: 170px;

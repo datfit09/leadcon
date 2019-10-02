@@ -497,32 +497,6 @@ if ( ! function_exists('leadcon_page_header') ) {
     }
 }
 
-
-if ( ! function_exists( 'leadcon_header_transparent_class' ) ) {
-    function leadcon_header_transparent_class() {
-        if( class_exists('acf') ) {
-            $pagecpf = get_field('lc_header_transparent');
-        }
-        $global = get_theme_mod( 'header_tranparent', false );
-        $page = get_post_meta( get_the_ID(), 'transparent', true );
-        $classes = 'site-header';
-        if (!empty($pagecpf)){
-            if ( empty( $page ) || 'default' === $pagecpf ) {
-                if ( true === $global ) {
-                    $classes = 'site-header header-transparent';
-                }
-            }else {
-                if ( 'show' === $pagecpf ) {
-                    $classes = 'site-header header-transparent';
-                }
-            }
-
-            return $classes;
-        }
-    }
-}
-
-
 /*
  FUNCTION SET CLOSE TAG FOOTER
  */
