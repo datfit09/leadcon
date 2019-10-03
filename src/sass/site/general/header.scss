@@ -280,19 +280,6 @@
     background-color: #ffc600;
 }
 
-.top-bar-content {
-    display: flex;
-    align-items: center;
-    min-height: 50px;
-    .wellcome{
-        flex-grow: 1;
-    }
-    .text-language{
-        margin-left: 45px;
-        cursor: pointer;
-    }
-}
-
 #topbar {
     list-style: none;
 
@@ -431,42 +418,16 @@ li.item-contact.item-email {
 
 /* HEADER LAYOUT 4 */
 
-.header-4 {
-    .arrow-icon{
-        color: #fff;
+.header-1 {
+    ul#primary-menu > li.menu-item-has-children ul li a {
+        color: #000;
     }
-    ul.menu>li{
-        a {
-            color: #fff;
-            &:hover{
-                border: solid 1px transparent;
-                border-radius: 0 0 5px 5px;
-                color: #261b00;
-                background-color: #ffc600;
-                border: solid 1px #ffc600;
-            }
-        }
-    }
-    ul.menu>li.current-menu-item{
-        a {
-            color: #000;
-            background-color: #ffc600;
-            border: solid 1px #ffc600;
-            border-radius: 0 0 5px 5px;
-        }
-    }
-    ul.sub-menu>li.menu-item{
-        a {
-            color: #000;
-            background-color: #fff;
-            border: solid 1px #fff;
-            &:hover{
-                border: solid 1px transparent;
-                border-radius: 0 0 5px 5px;
-                color: #261b00;
-                background-color: #ffc600;
-                border: solid 1px #ffc600;
-            }
+    .site-header-container{
+        .button-download {
+            border: none;
+            padding: 10px 17px;
+            border-radius: 3px;
+            margin-left: 50px;
         }
     }
 }
@@ -729,9 +690,11 @@ li.item-contact.item-email {
     z-index: 99;
 }
 
-
 .admin-bar .header-transparent {
-    top: 50px;
+    @media (min-width: 786px) {
+        top: 32px;
+    }
+     top: 46px;
 
     @media (max-width: 787px) {
         .site-title a {
@@ -755,15 +718,6 @@ li.item-contact.item-email {
     }
 
 }
-
-.home {
-    .header-transparent {
-        background: transparent;
-        position: relative;
-        top: 0;
-    }
-}
-
 
 #comment {
     min-height: 170px;

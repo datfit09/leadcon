@@ -134,6 +134,8 @@ Leadcon_Kirki::add_field(
                     '.header-2 ul.menu > li a:hover',
                     '.header-3 ul.menu > li.current_page_item a',
                     '.main-navigation ul a:hover',
+                    '.main-navigation ul#sticky-menu-wrapper > li.current_page_item a',
+                    '.main-navigation ul#primary-menu > li.current_page_item a',
 				),
 			), // End color property
 

@@ -77,13 +77,10 @@
         }
     }
 
-    ul#sticky-menu-wrapper>li.current_page_item{
+    ul#sticky-menu-wrapper>li.current_page_item {
         a {
             border: solid 1px transparent;
             border-radius: 0 0 5px 5px;
-            color: #261b00;
-            background-color: #ffc600;
-            border: solid 1px #ffc600;
         }
     }
     ul#sticky-menu-wrapper>li.current_page_item{
@@ -95,9 +92,6 @@
                 &:hover{
                     border: solid 1px transparent;
                     border-radius: 0 0 5px 5px;
-                    color: #261b00;
-                    background-color: #ffc600;
-                    border: solid 1px #ffc600;
                 }
             }
         }

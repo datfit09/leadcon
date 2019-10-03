@@ -6,6 +6,129 @@
  */
 
 /*
+ Header Layout 1
+ */
+Leadcon_Kirki::add_section(
+    'leadcon_header_layout',
+    array(
+        'title' => esc_html__( 'Header Layout', 'leadcon' ),
+        'panel' => 'leadcon_header_layout',
+    )
+);
+
+Leadcon_Kirki::add_field( 
+    'leadcon', 
+    [
+        'type'        => 'select',
+        'settings'    => 'leadcon_select_header_layout',
+        'label'       => esc_html__( 'Select Header', 'leadcon' ),
+        'section'     => 'leadcon_header_layout',
+        'default'     => 'option-1',
+        'priority'    => 10,
+        'multiple'    => 1,
+        'choices'     => [
+            'option-1' => esc_html__( 'Option 1', 'leadcon' ),
+            'option-2' => esc_html__( 'Option 2', 'leadcon' ),
+            'option-3' => esc_html__( 'Option 3', 'leadcon' ),
+        ],
+    ] 
+);
+
+Leadcon_Kirki::add_field(
+    'leadcon',
+    array(
+        'type'        => 'switch',
+        'settings'    => 'site_header_icon',
+        'label'       => esc_html__( 'Site Header Icon', 'leadcon' ),
+        'section'     => 'leadcon_header_layout',
+        'default'     => '1',
+        'priority'    => 10,
+        'choices'     => [
+            'on'  => esc_html__( 'Enable', 'leadcon' ),
+            'off' => esc_html__( 'Disable', 'leadcon' ),
+        ],
+    )
+);
+
+Leadcon_Kirki::add_field(
+    'leadcon',
+    array(
+        'type'        => 'switch',
+        'settings'    => 'button_download',
+        'label'       => esc_html__( 'Show button download', 'leadcon' ),
+        'section'     => 'leadcon_header_layout',
+        'default'     => '0',
+        'priority'    => 10,
+        'choices'     => [
+            'on'  => esc_html__( 'Enable', 'leadcon' ),
+            'off' => esc_html__( 'Disable', 'leadcon' ),
+        ],
+    )
+);
+
+Leadcon_Kirki::add_field( 
+    'leadcon', [
+        'type'     => 'link',
+        'settings' => 'link_download',
+        'label'    => esc_html__( 'Link download', 'leadcon' ),
+        'section'  => 'leadcon_header_layout',
+        'default'  => '',
+        'transport'   => 'auto',
+    ] 
+);
+
+Leadcon_Kirki::add_field(
+    'leadcon',
+    array(
+        'type'      => 'color',
+        'settings'  => 'leadcon_link_color',
+        'label'     => esc_html__( 'Link Color', 'leadcon' ),
+        'section'   => 'leadcon_header_layout',
+        'default'   => '#fff',
+        'transport' => 'auto',
+        'output'    => array(
+            // Start color property
+            array(
+                'property' => 'color',
+                'element'  => array(
+                    '.header-4 .button-download a',
+                    '.header-4 .arrow-icon',
+                    '.header-4 ul#primary-menu > li a',
+                ),
+            ), // End color property
+        ),
+    )
+);
+
+Leadcon_Kirki::add_field(
+    'leadcon',
+    array(
+        'type'      => 'color',
+        'settings'  => 'leadcon_bg_color',
+        'label'     => esc_html__( 'Background Color', 'leadcon' ),
+        'section'   => 'leadcon_header_layout',
+        'default'   => '#dc2c02',
+        'transport' => 'auto',
+        'output'    => array(
+            // Start color property
+            array(
+                'property' => 'background-color',
+                'element'  => array(
+                    '.button-download',
+                ),
+            ), // End color property
+            array(
+                'property' => 'color',
+                'element'  => array(
+                    '.header-4 .main-navigation ul#sticky-menu-wrapper > li.current_page_item a',
+                    '.header-4 .main-navigation ul#primary-menu > li.current_page_item a',                    
+                ),
+            ), // End color property
+        ),
+    )
+);
+
+/*
  Header Layout 2
  */
 
@@ -80,15 +203,44 @@ Leadcon_Kirki::add_field(
 	)
 );
 
+/*
+ Header Layout 4
+ */
+
+Leadcon_Kirki::add_section(
+    'leadcon_header_layout4',
+    array(
+        'title' => esc_html__( 'Header Layout 4', 'leadcon' ),
+        'panel' => 'leadcon_header_layout',
+    )
+);
+
+
+
+/*
+ Header Transparent
+ */
+
+Leadcon_Kirki::add_section(
+    'leadcon_header_transparent',
+    array(
+        'title' => esc_html__( 'Header Transparent', 'leadcon' ),
+        'panel' => 'leadcon_header_layout',
+    )
+);
+
 Leadcon_Kirki::add_field(
     'leadcon',
     array(
-        'type'        => 'textarea',
-        'settings'    => 'language',
-        'label'       => esc_html__( 'Language', 'leadcon' ),
-        'description' => esc_html__( 'Enter Language.', 'leadcon' ),
-        'section'     => 'leadcon_header_layout3',
-        'default'     => '',
-        'transport'   => 'postMessage',
+        'type'        => 'switch',
+        'settings'    => 'header_tranparent',
+        'label'       => esc_html__( 'Header Transparent', 'leadcon' ),
+        'section'     => 'leadcon_header_transparent',
+        'default'     => '0',
+        'priority'    => 10,
+        'choices'     => [
+            'on'  => esc_html__( 'Enable', 'leadcon' ),
+            'off' => esc_html__( 'Disable', 'leadcon' ),
+        ],
     )
 );

@@ -28,18 +28,3 @@
 .page-header .page-header-container {
     padding: 35px 0;
 }
-
-/* text language */
-.text-language{
-    &:after{
-        display: inline-block;
-        margin-left: 0px;
-        vertical-align: 0.255em;
-        content: "";
-        border-top: 0.3em solid;
-        border-right: 0.3em solid transparent;
-        border-bottom: 0px;
-        border-left: 0.3em solid transparent;
-    }
-}
-

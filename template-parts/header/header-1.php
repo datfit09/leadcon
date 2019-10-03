@@ -6,10 +6,11 @@
  */
 
 $class = leadcon_site_header_container_class();
+$transparent = leadcon_header_transparent_class();
 leadcon_site_search();
 ?>
 
-<header id="masthead" class="header-transparent header-1">
+<header id="masthead" class="<?php echo esc_attr( $transparent ); ?> header-1">
 	<div class="<?php echo esc_attr( $class ); ?>">
 		<div class="site-header-container">
 			<?php get_template_part( 'template-parts/header/site-branding' ); ?>
@@ -35,13 +36,28 @@ leadcon_site_search();
 				?>
 			</nav><!-- #site-navigation -->
 
-            <div class="site-header-minor">
-                <?php leadcon_site_search_toggle(); ?>
-                <div class="site-user-icon">
-                    <a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>" class='icon-user'></a>
-                </div>
-                <?php leadcon_header_cart(); ?>
-            </div><!-- .site-header-minor -->
+            <?php if ( get_theme_mod( 'site_header_icon', true ) === true ) { ?>
+                <div class="site-header-minor">
+                    <?php leadcon_site_search_toggle(); ?>
+                    <div class="site-user-icon">
+                        <a href="<?php echo esc_url( home_url( '/my-account' ) ); ?>" class='icon-user'></a>
+                    </div>
+                    <?php leadcon_header_cart(); ?>
+                </div><!-- .site-header-minor -->
+            <?php } ?>
+
+            <?php if ( get_theme_mod('button_download',true) === true ) { ?>
+                <button class="button-download">
+                    <a 
+                    href="<?php
+                        if ( get_theme_mod( 'link_download' ) ){
+                            echo get_theme_mod( 'link_download' );
+                        }
+                    ?>" target="_blank">
+                        <?php echo esc_html__( 'Free Download', 'leadcon' ) ?>
+                    </a>                    
+                </button>
+            <?php } ?>
 
 		</div><!-- .site-header-container -->
 	</div><!-- .leadcon-container -->
