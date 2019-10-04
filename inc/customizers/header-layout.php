@@ -16,22 +16,20 @@ Leadcon_Kirki::add_section(
     )
 );
 
-Leadcon_Kirki::add_field( 
-    'leadcon', 
-    [
-        'type'        => 'select',
-        'settings'    => 'leadcon_select_header_layout',
-        'label'       => esc_html__( 'Select Header', 'leadcon' ),
-        'section'     => 'leadcon_header_layout',
-        'default'     => 'option-1',
-        'priority'    => 10,
-        'multiple'    => 1,
-        'choices'     => [
-            'option-1' => esc_html__( 'Option 1', 'leadcon' ),
-            'option-2' => esc_html__( 'Option 2', 'leadcon' ),
-            'option-3' => esc_html__( 'Option 3', 'leadcon' ),
-        ],
-    ] 
+Leadcon_Kirki::add_field(
+    'leadcon',
+    array(
+        'type'     => 'radio-image',
+        'settings' => 'leadcon_menu_layout',
+        'label'    => esc_html__( 'Menu Layout', 'leadcon' ),
+        'section'  => 'leadcon_header_layout',
+        'default'  => 'right-menu',
+        'choices'  => array(
+            'left-menu'  => get_template_directory_uri() . '/assets/images/sidebar/left-sidebar.png',
+            'center-menu'    => get_template_directory_uri() . '/assets/images/sidebar/no-sidebar.png',
+            'right-menu' => get_template_directory_uri() . '/assets/images/sidebar/right-sidebar.png',
+        ),
+    )
 );
 
 Leadcon_Kirki::add_field(

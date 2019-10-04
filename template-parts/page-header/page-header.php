@@ -67,6 +67,18 @@ if( class_exists('acf') ) {
     		endif;
     		?>
 
+            <?php if ( is_page() ) { ?>
+            <div class="container">
+                <div class="description-page">
+                    <?php
+                    if ( get_theme_mod( 'description_page' ) ){
+                        echo get_theme_mod( 'description_page' );
+                    }
+                    ?>
+                </div>
+            </div>
+            <?php } ?>
+
             <?php /*if ( get_theme_mod( 'breadcrumb', true ) === true ) {*/ ?>
                 <div class="breadcrumb"><!-- breadcrumb -->
                     <div class="container container-breadcrumb">

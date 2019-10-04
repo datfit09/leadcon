@@ -15,6 +15,22 @@
     }
 }
 
+.container-enlarge {
+    @include container-fixed;
+    @media (min-width: $screen-sm-min) {
+        width: $container-sm;
+    }
+    @media (min-width: $screen-md-min) {
+        width: $container-md;
+    }
+    @media (min-width: 1200px){
+        width: 1200px;
+    }
+    @media (min-width: 1370px) {
+        width: 1370px;
+    }
+}
+
 .page-header {
     background-color: #f9f9f9;
     display: flex;
@@ -27,4 +43,10 @@
 
 .page-header .page-header-container {
     padding: 35px 0;
+}
+
+.description-page{
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 20px;
 }

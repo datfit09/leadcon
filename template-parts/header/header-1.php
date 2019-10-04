@@ -7,12 +7,13 @@
 
 $class = leadcon_site_header_container_class();
 $transparent = leadcon_header_transparent_class();
+$menu_layout = get_theme_mod( 'leadcon_menu_layout', 'center-menu' );  
 leadcon_site_search();
 ?>
 
 <header id="masthead" class="<?php echo esc_attr( $transparent ); ?> header-1">
 	<div class="<?php echo esc_attr( $class ); ?>">
-		<div class="site-header-container">
+		<div class="site-header-container <?php echo $menu_layout; ?>">
 			<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 
             <div class="menu-toggle-container">
@@ -23,7 +24,7 @@ leadcon_site_search();
                 </a><!-- .menu-toggle -->
             </div><!-- .menu-toggle-container -->
 
-			<nav id="site-navigation" class="header-navigation main-navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'leadcon' ); ?>">
+			<nav id="site-navigation" class="header-navigation main-navigation " aria-label="<?php esc_attr_e( 'Primary Menu', 'leadcon' ); ?>">
 				<?php
 				if ( has_nav_menu('primary') ) {
 					wp_nav_menu(

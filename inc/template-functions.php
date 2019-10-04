@@ -401,11 +401,15 @@ if ( ! function_exists( 'leadcon_site_header' ) ) {
 
 if ( ! function_exists( 'leadcon_site_header_container_class' ) ) {
     function leadcon_site_header_container_class() {
+        $pagecpf = '';
+        if( class_exists('acf') ) {
+            $pagecpf = get_field('lc_option_container');
+        }
         $page = get_post_meta( get_the_ID(), 'container', true );
         $customize = get_theme_mod( 'site_container');
         $classes = '';
 
-        if ( empty($page) || $page === 'default' ) {
+        if ( empty($pagecpf) || $pagecpf === 'default' ) {
             switch ( $customize ) {
                 case 'full-width':
                     $classes = 'container-fluid';
@@ -416,17 +420,21 @@ if ( ! function_exists( 'leadcon_site_header_container_class' ) ) {
                     break;
             }
         }else {
-            switch ( $page ) {
+            switch ( $pagecpf ) {
                 case 'full-width':
                     $classes = 'container-fluid';
                     break;
 
                 case 'box':
-                    $classes = 'container';
+                    $classes = 'container-enlarge';
+                    var_dump($classes);
+
                     break;
 
                 case 'container':
                     $classes = 'container';
+                    var_dump($classes);
+
                     break;
             }
         }
@@ -455,10 +463,6 @@ if ( ! function_exists( 'leadcon_get_header' ) ) {
 
                 case 'header-3':
                     $header = get_template_part( 'template-parts/header/header-3' );
-                    break;
-
-                case 'header-4':
-                    $header = get_template_part( 'template-parts/header/header-4' );
                     break;
 
                 default:

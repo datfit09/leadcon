@@ -79,6 +79,21 @@ Leadcon_Kirki::add_field(
 );
 
 /**
+ * Description Page
+ */
+Leadcon_Kirki::add_field(
+    'leadcon',
+    array(
+        'type'        => 'editor',
+        'settings'    => 'description_page',
+        'label'       => esc_html__( 'Description Page', 'leadcon' ),
+        'section'     => 'leadcon_general',
+        'default'     => 'Sed suscipit quam at est tincidunt, eget porta ipsum rutrum. Pellentesque maximus risus quis elit consequat posuere. Ut non diam est.',
+        'transport'   => 'auto',
+    )
+);
+
+/**
  * Image preload
  */
 Leadcon_Kirki::add_field( 

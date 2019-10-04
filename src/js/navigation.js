@@ -156,3 +156,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 })(jQuery);
+
+/* Pull Menu toggle header 2 */
+( function( $ ) {
+    var pull   = $('#pull'),
+        toggle = $( '#toggle' ),
+        menu   = $('.menu-menu-1-container');
+ 
+    pull.on('click', function( e ) {
+        e.preventDefault();
+        toggle.toggleClass( 'on' );
+    });
+
+})( jQuery );

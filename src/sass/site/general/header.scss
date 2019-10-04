@@ -8,6 +8,19 @@
     align-items: center;
 }
 
+.left-menu{
+    .main-navigation{
+        flex-grow: 1;
+    }
+}
+
+.right-menu{
+    .site-branding{
+        flex-grow: 1;
+    }
+}
+
+
 .site-branding {
 
     img {
