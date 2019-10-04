@@ -110,6 +110,8 @@ Leadcon_Kirki::add_field(
 				'element'  => array(
                     'a:hover',
                     'a:hover:before',
+                    '.site-search-icon:hover',
+                    '.search-form:after',
                     '.comment-metadata a:hover',
                     '.footer-menu li>a:hover',
                     '.widget_categories a:hover',
