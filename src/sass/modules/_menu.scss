@@ -365,7 +365,7 @@ header.header-2 {
 // on activation.
 #toggle.on {
     span {
-        background-color: transparent;
+        background-color: transparent !important;
         &:before {
             width: 100%;
             transform: rotate(45deg) translate(5px, 5px);

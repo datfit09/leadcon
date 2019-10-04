@@ -139,14 +139,25 @@ Leadcon_Kirki::add_section(
 );
 
 Leadcon_Kirki::add_field(
-	'leadcon',
-	[
-		'type'        => 'editor',
-		'settings'    => 'social_menu',
-		'label'       => esc_html__( 'Menu Social', 'leadcon' ),
-		'section'     => 'leadcon_header_layout2',
-		'default'     => '',
-	]
+    'leadcon',
+    array(
+        'type'      => 'color',
+        'settings'  => 'leadcon_icon_menu_color',
+        'label'     => esc_html__( 'Menu Color', 'leadcon' ),
+        'section'   => 'leadcon_header_layout2',
+        'default'   => '#fff',
+        'transport' => 'auto',
+        'output'    => array(
+            array(
+                'property' => 'background-color',
+                'element'  => array(
+                    '.header-2 #toggle span',
+                    '.header-2 #toggle span:after',
+                    '.header-2 #toggle span:before',
+                ),
+            ), 
+        ),
+    )
 );
 
 /*
@@ -200,20 +211,6 @@ Leadcon_Kirki::add_field(
 		'transport'   => 'postMessage',
 	)
 );
-
-/*
- Header Layout 4
- */
-
-Leadcon_Kirki::add_section(
-    'leadcon_header_layout4',
-    array(
-        'title' => esc_html__( 'Header Layout 4', 'leadcon' ),
-        'panel' => 'leadcon_header_layout',
-    )
-);
-
-
 
 /*
  Header Transparent
