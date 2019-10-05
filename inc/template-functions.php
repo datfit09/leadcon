@@ -325,6 +325,23 @@ if ( ! function_exists( 'leadcon_post_thumbnail' ) ) :
 	}
 endif;
 
+
+/*! SET IMAGE ALT
+
+------------------------------------------------->*/
+
+if ( ! function_exists( 'leadcon_img_alt' ) ):
+
+    function leadcon_img_alt( $id = null, $alt = '' ) {
+        $data    = get_post_meta( $id, '_wp_attachment_image_alt', true );
+        $img_alt = ! empty( $data ) ? $data : $alt;
+        return $img_alt;
+    }
+
+endif;
+
+
+
 /* CHECK IF ELEMENTOR IS ACTIVE
 ***************************************************/
 if ( ! function_exists( 'leadcon_is_elementor' ) ) :
